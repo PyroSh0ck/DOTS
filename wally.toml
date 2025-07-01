@@ -1,0 +1,11 @@
+[package]
+name = "parthmodi/dots"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+# client sided dependencies
+
+[server-dependencies]
+
