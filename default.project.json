@@ -1,32 +1,35 @@
 {
-  "name": "DOTS",
+  "name": "project",
   "tree": {
     "$className": "DataModel",
-
     "ReplicatedStorage": {
-      "Shared": {
-        "$path": "src/shared"
-      },
-      "Packages": {
-        "$path": "Packages"
-      }
+      "$className": "ReplicatedStorage",
+      "$ignoreUnknownInstances": true,
+      "$path": "src/ReplicatedStorage"
     },
-
     "ServerScriptService": {
-      "Server": {
-        "$path": "src/server"
-      },
-      "ServerPackages": {
-        "$path": "ServerPackages"
-      }
+      "$className": "ServerScriptService",
+      "$ignoreUnknownInstances": true,
+      "$path": "src/ServerScriptService"
     },
-
+    "StarterPack": {
+      "$className": "StarterPack",
+      "$ignoreUnknownInstances": true,
+      "$path": "src/StarterPack"
+    },
     "StarterPlayer": {
+      "$className": "StarterPlayer",
       "StarterPlayerScripts": {
-        "Client": {
-          "$path": "src/client"
-        }
-      }
+        "$className": "StarterPlayerScripts",
+        "$ignoreUnknownInstances": true,
+        "$path": "src/StarterPlayer/StarterPlayerScripts"
+      },
+      "$ignoreUnknownInstances": true
+    },
+    "Workspace": {
+      "$className": "Workspace",
+      "$ignoreUnknownInstances": true,
+      "$path": "src/Workspace"
     }
   }
 }
