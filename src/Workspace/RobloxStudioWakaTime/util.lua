@@ -17,7 +17,7 @@ function module.trimString(s: string)
 	return s:match("^%s*(.-)%s*$")
 end
 
-function module.isValidWakaTimeApiKey(key: string)
+function module.isValidWakaTimeApiKey(_key: string)
 	return true
 end
 

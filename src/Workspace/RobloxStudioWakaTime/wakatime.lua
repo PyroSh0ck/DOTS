@@ -97,7 +97,7 @@ local function sendHeartbeat(plugin: Plugin, activity: StudioActivity)
 		},
 	})
 	if ok then
-		-- print("Sent WakaTime heartbeat", bodyToSend)
+		print("Sent WakaTime heartbeat", bodyToSend)
 	else
 		warn("Failed to call WakaTime API.", response.Body)
 	end
