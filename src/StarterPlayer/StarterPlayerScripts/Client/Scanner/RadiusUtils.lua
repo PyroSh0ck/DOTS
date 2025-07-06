@@ -24,14 +24,14 @@ function RadiusUtils.HeldDown(scanner, keycode)
     if not scanner.scanning then
         scanner:SetScannable(false)
         if keycode == Enum.KeyCode.V then
-            if CurrentRadius < MAX_RADIUS then
+            if CurrentRadius <= MAX_RADIUS then
                 scanner:ChangeRadius(1)
                 radiusLabel.Text = "Radius: "..tostring(CurrentRadius)
             else
                 RadiusUtils.showRadiusErr("WARNING: MAX RADIUS REACHED")
             end
         elseif keycode == Enum.KeyCode.C then
-            if CurrentRadius > MIN_RADIUS then
+            if CurrentRadius >= MIN_RADIUS then
                 scanner:ChangeRadius(-1)
                 radiusLabel.Text = "Radius: "..tostring(CurrentRadius)
             else

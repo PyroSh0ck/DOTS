@@ -11,6 +11,7 @@ function M1Click.HeldDown(scanner)
         local origin = cam.CFrame.Position
         local directionVector = cam.CFrame.LookVector
 
+
         local resArr = DotUtils.GetDots(scanner, origin, directionVector)
         PlaceDotsEvent:FireServer(resArr)
         LaserUtils.DrawLasers(resArr, scanner.scannerToolRef)
@@ -22,3 +23,4 @@ function M1Click.Released(scanner)
 end
 
 return M1Click
+	

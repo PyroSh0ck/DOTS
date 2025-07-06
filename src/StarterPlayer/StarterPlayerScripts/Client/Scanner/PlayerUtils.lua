@@ -8,14 +8,14 @@ function PlayerUtils.ToggleLockPlayer()
     if not PlayerUtils.playerLocked then
         if plr.Character then
             PlayerUtils.playerLocked = true
-            plr.Character.Humanoid.Walkspeed = 0
+            plr.Character.Humanoid.WalkSpeed = 0
         else
             plr.CharacterAdded:Wait()
             PlayerUtils.ToggleLockPlayer()
         end
     elseif PlayerUtils.playerLocked then
         PlayerUtils.playerLocked = false
-        plr.Character.Humanoid.Walkspeed = 16
+        plr.Character.Humanoid.WalkSpeed = 16
     end
 end
 

@@ -7,7 +7,7 @@ local DotUtils = {
 function DotUtils.GetWiggle(scanner)
     local randNum = DotUtils.randObj:NextNumber(-1, 1)
 
-    return (randNum / scanner.MAX_RADIUS + DotUtils.radiusScaler - scanner.CurrentRadius)
+    return (randNum / (scanner.MAX_RADIUS + DotUtils.radiusScaler - scanner.CurrentRadius))
 end
 
 function DotUtils.RandomizeAndFormatDirectionVector(directionVector, scanner)
@@ -20,7 +20,7 @@ function DotUtils.GetDots(scanner, origin, directionVector)
     local resArr = {}
     local counter = 0
 
-    while counter < scanner.desnity do
+    while counter < scanner.density do
         local modifiedDirectionVector = DotUtils.RandomizeAndFormatDirectionVector(directionVector, scanner)
         local raycastResult = RaycastUtils.SendRaycast(origin, modifiedDirectionVector, scanner.raycastParams)
         if raycastResult then

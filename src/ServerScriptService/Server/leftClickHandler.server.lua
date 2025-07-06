@@ -1,4 +1,4 @@
-local SS = game:GetService("ServerScriptService")
+local SS = game:GetService("ServerStorage")
 local Events = game:GetService("ReplicatedStorage").Events
 local wallColor = Color3.fromRGB(163, 162, 165)
 local entityColor = Color3.new(1, 0, 0)
@@ -34,10 +34,10 @@ function PlaceDots(resArr)
 	end
 end
 
-Events.PlaceDot.OnServerEvent:Connect(function(_plr, pos, normal)
-	PlaceDot(pos, normal)
+Events.PlaceDot.OnServerEvent:Connect(function(_plr, ...)
+	PlaceDot(...)
 end)
 
-Events.PlaceDots.OnServerEvent:Connect(function(_plr, resArr)
-	PlaceDots(resArr)
+Events.PlaceDots.OnServerEvent:Connect(function(_plr, ...)
+	PlaceDots(...)
 end)
